@@ -72,7 +72,7 @@ namespace TestProject1
         {
             //AAA method
             //Arrange
-            string password = " ";
+            string password = " Konika@3456";
             string expected = "invalid";
 
             //Act
