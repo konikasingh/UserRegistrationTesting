@@ -48,5 +48,24 @@ namespace UserRegistrationTesting
                 return "invalid";
             }
         }
+        //This method for validation of email id
+        public static string EmailValid(string name)
+        {
+            //Regular expression of email id
+            string emailid = "^[0-9a-zA-Z]+[.+-_]{0,1}[0-9a-zA-Z]+[@][0-9a-zA-Z]+[.][a-zA-Z]{2,4}([a-zA-Z]{2,3}){0,1}";
+            Regex regex = new Regex(emailid);
+
+            if (regex.IsMatch(name))
+            {
+                //Console.WriteLine("Email Id is valid");
+                return "valid";
+            }
+            else
+            {
+                //Console.WriteLine("Email Is Invalid,Please Enter Valid Email Id.");
+                return "invalid";
+            }
+
+        }
     }
 }

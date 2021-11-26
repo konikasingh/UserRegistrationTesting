@@ -38,5 +38,20 @@ namespace TestProject1
             //comparing actual and expected value
             Assert.AreEqual(expected, actual);
         }
+        [TestMethod]
+        public void ValidEmailIdOfUser()
+        {
+            //AAA method
+            //Arrange
+            string emailId = "Konika1996@gmail.com ";
+            string expected = "valid";
+
+            //Act
+            string actual = UserRegistration.EmailValid(emailId);
+
+            //Assert
+            //comparing actual and expected value
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
