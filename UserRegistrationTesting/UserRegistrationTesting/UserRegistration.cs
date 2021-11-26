@@ -86,6 +86,27 @@ namespace UserRegistrationTesting
             }
 
         }
+        //This method for validation password
+        public static string PasswordValid(string name)
+        {
+            //Regular expression of password
+            //Rule 1 : minimum 8 charactors
+            string password = "^[a-zA-Z]{8}$";
+            Regex regex = new Regex(password);
+
+            if (regex.IsMatch(name))
+            {
+                //Console.WriteLine("Password is valid");
+                return "valid";
+            }
+            else
+            {
+                //Console.WriteLine("Password Is Invalid,Please Enter Valid Email Id.");
+                return "invalid";
+            }
+
+        }
+
 
     }
 }
