@@ -53,5 +53,19 @@ namespace TestProject1
             //comparing actual and expected value
             Assert.AreEqual(expected, actual);
         }
+        [TestMethod]
+        public void ValidMobileNumOfUser()
+        {
+            //AAA method
+            //Arrange
+            string num = "91 7090897865 ";
+            string expected = "invalid";
+            //Act
+            string actual = UserRegistration.MobileNumValid(num);
+
+            //Assert
+            //comparing actual and expected value
+            Assert.AreEqual(expected, actual);
+        }
     }
 }

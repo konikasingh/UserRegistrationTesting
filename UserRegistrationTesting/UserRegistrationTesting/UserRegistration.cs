@@ -67,5 +67,25 @@ namespace UserRegistrationTesting
             }
 
         }
+        //This method for validation of mobile number
+        public static string MobileNumValid(string num)
+        {
+            //Regular expression of mobile number
+            string number = "^[0-9]{1,2}[ ]{1}[0-9]{10}$";
+            Regex regex = new Regex(number);
+
+            if (regex.IsMatch(num))
+            {
+                //Console.WriteLine("Mobile Number is valid");
+                return "valid";
+            }
+            else
+            {
+                //Console.WriteLine("Mobile number is Invalid,Please Enter Valid MObile Number format.");
+                return "invalid";
+            }
+
+        }
+
     }
 }
